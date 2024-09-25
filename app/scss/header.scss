@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  display: flex;
+}
+.left-column {
+  width: 852px;
+  height: 3581px;
+  background-color: #273347;
+  float: left;
+  box-sizing: border-box;
+}
+.right-column {
+  width: 2551px;
+  height: 3581px;
+  background-color: #fefefe;
+  float: left;
+  display: flex;
+  padding: 98px;
+  box-sizing: border-box;
+}
+.name {
+  font-size: 120px;
+  letter-spacing: 8px;
+  line-height: 209px;
+  color: #403f40;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+}
+.surname {
+  font-size: 120px;
+  letter-spacing: 8px;
+  line-height: 209px;
+  color: #403f40;
+  font-weight: 700;
+  font-family:"Open Sans", sans-serif;
+  margin-left: 40px;
+}
