@@ -1,19 +1,19 @@
 .header-section {
-  width: 100%;
+  width: 100%; /* Використовуємо повну ширину для контейнера */
   display: flex;
+  justify-content: space-between;
 }
 
 .left-column {
-  width: 852px;
-  height: 3581px;
   background-color: #273347;
   display: flex;
+  align-items: center;
   flex-direction: column;
+  width: 30%; /* Ліва колонка займатиме 30% ширини */
+  padding: 20px; /* Додаємо внутрішній відступ для гарного вигляду */
   position: relative;
-  align-items: flex-start;
-  padding-left: 20px;
 
-  .profile-image-container {
+  /*.profile-image-container {
     width: 511px;
     height: 511px;
     border-radius: 255px;
@@ -32,61 +32,81 @@
     border-radius: 50%;
     transform: scale(0.9);
     object-fit: cover;
+  }*/
+  .profile-image-container {
+    width:300px; /* Контейнер тепер займатиме 100% ширини колонки */
+    height: 300px; /* Автоматична висота для пропорційного зменшення */
+    border-radius: 50%; /* Кругла форма контейнера */
+    background-color: #273347;
+    border: 4px solid #fefefe;
+    margin-top: 10%; /* Відсотковий відступ зверху */
+    display: flex;
+  }
+
+  .profile-image-container img {
+    width: 90%; /* Зображення займає 90% ширини контейнера */
+    height: 90%;
+    border-radius: 50%; /* Кругле зображення */
+    object-fit: cover; /* Заповнення контейнера без спотворення */
   }
 }
 
 .right-column {
-  width: 2551px;
-  height: 3580px;
+  box-sizing: border-box;
+  height: 100vh;
+  padding-left: 5%;
+  padding-right: 3%;
   background-color: #fefefe;
-  padding-top: 100px;
-  padding-left: 100px;
-  padding-right: 60px;
-  position: relative;
+  overflow-wrap: break-word;
 
   h1 {
-    font-size: 125px;
-    letter-spacing: 8px;
-    line-height: 209px;
+    font-size: 75px;
+
+    letter-spacing: 4px;
     color: #403f40;
     font-weight: 300;
     font-family: "Open Sans", sans-serif;
-  }
+    padding-top: 10%;
 
+  }
+  h1::after{
+    content: " Anderson";
+    font-weight: bold;
+  }
   h2 {
-    font-size: 50px;
+    font-size: 25px;
     letter-spacing: 1px;
     line-height: 30px;
+    font-weight: bold;
     color: #808284;
     font-family: "Century Gothic", sans-serif;
   }
 
   .intro-text {
-    margin-top: 50px;
+    margin-top: 25px;
 
     h3 {
-      font-size: 63px;
+      font-size: 38px;
       color: #403f40;
       font-weight: 700;
       font-family: "Open Sans", sans-serif;
     }
 
     p {
-      width: 1505px;
-      height: 240px;
-      font-size: 35px;
+      font-size: 20px;
       color: #a6a9ab;
       font-weight: 400;
       font-family: "Open Sans", sans-serif;
       text-align: justify;
+      word-wrap: break-word;
     }
   }
 
   /* Секція Experience заголовок */
-  .experience-section {
-    h4 {
-      font-size: 63px;
-      line-height: 67px;
+  .experience-section,{
+    h4, {
+      font-size: 35px;
+      padding-top: 20px;
       text-transform: uppercase;
       color: #403f40;
       font-weight: 700;
@@ -94,12 +114,298 @@
     }
 
     .header-line {
-      width: 1500px;
-      height: 4px;
+      width: 100%;
+      height: 2px;
       background-color: #403f40;
       margin-top: 10px;
+      margin-bottom: 5%;
+    }
+
+    .col-md-1 {
+      padding-left: 30px;
+      position: relative;
+
+      .line {
+        width: 3px;
+        height: 448px;
+        background-color: #424242;
+        position: relative;
+        //left: 5px;
+      }
+
+      .circle {
+        width: 25px;
+        height: 25px;
+        border-radius: 15px;
+        background-color: #f3f5f5;
+        border: 3px solid #404041;
+        position: absolute;
+        left: -11px; /* Центруємо коло відносно лінії */
+      }
+
+      .circle:nth-child(1) {
+        top: 0;
+      }
+
+      .circle:nth-child(2) {
+        top: 170px;
+      }
+
+      .circle:nth-child(3) {
+        top: 340px;
+      }
+    }
+    .col-md-4 {
+      position: relative;
+      align-items: flex-start;
+
+      .experience-item {
+        margin-bottom: 78px; /* Інтервал між блоками */
+      }
+
+      .position-title {
+        font-size: 22px;
+        letter-spacing: 1px;
+        //line-height: 50px;
+        text-transform: uppercase;
+        color: #424242;
+        font-weight: 700;
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+      }
+
+      .date-range {
+        font-size: 20px;
+        color: #939598;
+        font-weight: 700;
+        font-family: "Lato", sans-serif;
+        margin: 0;
+      }
+    }
+    .col-md-7 {
+      align-items: flex-start;
+
+      .company-item {
+        margin-bottom: 60px; /* Інтервал між компаніями */
+      }
+      h1::before{
+        content: " Company Name | Location";
+        font-weight: bold;
+        font-size: 23px;
+        color: #404041;
+        text-align: left;
+
+      }
+      .company-description {
+        font-size: 17px;
+        line-height: 1.2;
+        word-spacing: -2px;
+        color: #939598;
+        font-weight: 400;
+        font-family: "Open Sans", sans-serif;
+        text-align: justify;
+      }
     }
   }
 
+  .education-section {
+    h4 {
+      font-size: 35px;
+      padding-top: 20px;
+      text-transform: uppercase;
+      color: #403f40;
+      font-weight: 700;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    .header-line {
+      width: 100%;
+      height: 2px;
+      background-color: #403f40;
+      margin-top: 10px;
+      margin-bottom: 5%;
+    }
+
+    .col-md-1 {
+      padding-left: 30px;
+      position: relative;
+
+      .line {
+        width: 3px;
+        height: 300px;
+        background-color: #424242;
+        position: relative;
+      }
+
+      .circle {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: #f3f5f5;
+        border: 3px solid #404041;
+        position: absolute;
+        left: -11px; /* Центруємо коло відносно лінії */
+      }
+
+      .circle:nth-child(1) {
+        top: 0;
+      }
+
+      .circle:nth-child(2) {
+        top: 150px;
+      }
+    }
+
+    .col-md-4 {
+      position: relative;
+      align-items: flex-start;
+
+      .education-item {
+        margin-bottom: 78px; /* Інтервал між блоками */
+      }
+
+      .position-title {
+        font-size: 22px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #424242;
+        font-weight: 700;
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+      }
+
+      .date-range {
+        font-size: 20px;
+        color: #939598;
+        font-weight: 700;
+        font-family: "Lato", sans-serif;
+        margin: 0;
+      }
+    }
+
+    .col-md-7 {
+      align-items: flex-start;
+
+      .education-item {
+        margin-bottom: 60px; /* Інтервал між університетами */
+      }
+
+      .education-header {
+        font-weight: bold;
+        font-size: 23px;
+        color: #404041;
+      }
+
+      .education-description {
+        font-size: 17px;
+        line-height: 1.2;
+        word-spacing: -2px;
+        color: #939598;
+        font-weight: 400;
+        font-family: "Open Sans", sans-serif;
+        text-align: justify;
+      }
+    }
+  }
+
+  .references-section {
+    h4 {
+      font-size: 35px;
+      padding-top: 20px;
+      text-transform: uppercase;
+      color: #403f40;
+      font-weight: 700;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    .header-line {
+      width: 100%;
+      height: 2px;
+      background-color: #403f40;
+      margin-top: 10px;
+      margin-bottom: 5%;
+    }
+
+    .col-md-1 {
+      padding-left: 30px;
+      position: relative;
+
+      .line {
+        width: 3px;
+        height: 200px;
+        background-color: #424242;
+        position: relative;
+      }
+
+      .circle {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: #f3f5f5;
+        border: 3px solid #404041;
+        position: absolute;
+        left: -11px; /* Центруємо коло відносно лінії */
+      }
+
+      .circle:nth-child(1) {
+        top: 0;
+      }
+
+      .circle:nth-child(2) {
+        top: 120px;
+      }
+    }
+
+    .col-md-4 {
+      position: relative;
+      align-items: flex-start;
+
+      .reference-item {
+        margin-bottom: 78px; /* Інтервал між блоками */
+      }
+
+      .name-title {
+        font-size: 22px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #424242;
+        font-weight: 700;
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+      }
+
+      .position {
+        font-size: 18px;
+        color: #939598;
+        font-weight: 400;
+        font-family: "Lato", sans-serif;
+      }
+    }
+
+    .col-md-7 {
+      align-items: flex-start;
+
+      .company-item {
+        margin-bottom: 60px;
+      }
+
+      .company-name {
+        font-size: 20px;
+        font-weight: 700;
+        color: #403f40;
+      }
+
+      .company-description {
+        font-size: 16px;
+        color: #939598;
+      }
+      .contact-info {
+        font-size: 16px;
+        color: #939598;
+        font-weight: 400;
+        font-family: "Open Sans", sans-serif;
+      }
+    }
+  }
 }
 
