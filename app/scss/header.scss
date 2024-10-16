@@ -1,46 +1,29 @@
+body {
+  margin: 0; /* Відміняємо стандартні відступи браузера */
+  padding-right: 3%; /* Встановлюємо відступ справа на всій сторінці */
+  height: 100%;
+  box-sizing: border-box; /* Щоб padding враховувався в ширині */
+}
 .header-section {
   width: 100%; /* Використовуємо повну ширину для контейнера */
-  display: flex;
   justify-content: space-between;
 }
-
 .left-column {
   background-color: #273347;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 30%; /* Ліва колонка займатиме 30% ширини */
-  padding: 20px; /* Додаємо внутрішній відступ для гарного вигляду */
-  position: relative;
+  padding-top: 30px;
+  box-sizing: border-box;
 
-  /*.profile-image-container {
-    width: 511px;
-    height: 511px;
-    border-radius: 255px;
-    background-color: #273347;
-    border: 8px solid #fefefe;
-    margin-top: 70px;
-    margin-left: 70px;
-    display: flex;
-    position: relative;
-    z-index: 1;
-  }
 
-  .profile-image-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    transform: scale(0.9);
-    object-fit: cover;
-  }*/
+  /* Image */
   .profile-image-container {
-    width:300px; /* Контейнер тепер займатиме 100% ширини колонки */
-    height: 300px; /* Автоматична висота для пропорційного зменшення */
+    width: 290px; /* Контейнер тепер займатиме 100% ширини колонки */
+    height: 290px; /* Автоматична висота для пропорційного зменшення */
     border-radius: 50%; /* Кругла форма контейнера */
     background-color: #273347;
     border: 4px solid #fefefe;
-    margin-top: 10%; /* Відсотковий відступ зверху */
+    margin-top: 15%; /* Відсотковий відступ зверху */
     display: flex;
+    margin-bottom: 115px;
   }
 
   .profile-image-container img {
@@ -49,363 +32,545 @@
     border-radius: 50%; /* Кругле зображення */
     object-fit: cover; /* Заповнення контейнера без спотворення */
   }
-}
 
-.right-column {
-  box-sizing: border-box;
-  height: 100vh;
-  padding-left: 5%;
-  padding-right: 3%;
-  background-color: #fefefe;
-  overflow-wrap: break-word;
+  /* Contact */
+  .contact-title {
 
-  h1 {
-    font-size: 75px;
-
-    letter-spacing: 4px;
-    color: #403f40;
-    font-weight: 300;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #fefefe;
+    font-weight: 700;
     font-family: "Open Sans", sans-serif;
-    padding-top: 10%;
+    padding-left: 10%;
+  }
+
+  .contact-line {
+    width: 80%;
+    height: 2px;
+    padding-left: 20px;
+    background-color: #fefefe;
+    margin: 0 auto 40px;
+  }
+
+  .phone-icon {
+    width: 30px;
+    height: 30px;
+    filter: invert(1) brightness(2);
+    margin-bottom: 54px;
+    margin-top: 6px;
+    display: flex;
+    margin-left: 40px;
+  }
+
+  .mail-icon {
+    width: 40px;
+    height: 42px;
+    filter: invert(1) brightness(2);
+    margin-bottom: 54px;
+    display: flex;
+    margin-left: 40px;
+  }
+
+  .web-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+    filter: invert(1) brightness(2);
+    margin-bottom: 35px;
+    display: flex;
+    margin-left: 40px;
+  }
+
+  p {
+    font-size: 20px;
+    color: #fefefe;
+    font-weight: 100;
+    line-height: 1.2;
+    font-family: "Lato", sans-serif;
+    padding-left: 20px;
+    padding-bottom: 28px;
+  }
+
+  .contact-info {
+    font-size: 20px;
+    color: #fefefe;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+  }
+
+  .skills-title {
+    margin-top: 50px;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #fefefe;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    padding-left: 10%;
+  }
+
+  .skills-line {
+    width: 80%;
+    height: 2px;
+    background-color: #fefefe;
+    margin: 0 auto 30px;
+
 
   }
-  h1::after{
-    content: " Anderson";
+
+  .skill-subtitle {
+
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #fefefe;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    padding-top: 20px;
+    padding-left: 10%;
+  }
+
+  .skill-info {
+    font-size: 20px;
+    color: #fefefe;
+    font-weight: 100;
+    font-family: "Lato", sans-serif;
+    padding-left: 10%;
+    padding-top: 10px;
+  }
+
+  .social-item {
+    margin-bottom: 20px;
+  }
+
+  .social-subtitle {
     font-weight: bold;
-  }
-  h2 {
-    font-size: 25px;
-    letter-spacing: 1px;
-    line-height: 30px;
-    font-weight: bold;
-    color: #808284;
-    font-family: "Century Gothic", sans-serif;
-  }
-
-  .intro-text {
-    margin-top: 25px;
-
-    h3 {
-      font-size: 38px;
-      color: #403f40;
-      font-weight: 700;
-      font-family: "Open Sans", sans-serif;
-    }
-
-    p {
-      font-size: 20px;
-      color: #a6a9ab;
-      font-weight: 400;
-      font-family: "Open Sans", sans-serif;
-      text-align: justify;
-      word-wrap: break-word;
-    }
+    margin: 0;
+    font-size: 21px;
+    color: #fefefe;
+    font-family: "Lato", sans-serif;
+    text-align: left;
+    padding-left: 10%;
+    padding-top: 8px;
   }
 
-  /* Секція Experience заголовок */
-  .experience-section,{
-    h4, {
-      font-size: 35px;
-      padding-top: 20px;
-      text-transform: uppercase;
-      color: #403f40;
-      font-weight: 700;
-      font-family: "Open Sans", sans-serif;
-    }
-
-    .header-line {
-      width: 100%;
-      height: 2px;
-      background-color: #403f40;
-      margin-top: 10px;
-      margin-bottom: 5%;
-    }
-
-    .col-md-1 {
-      padding-left: 30px;
-      position: relative;
-
-      .line {
-        width: 3px;
-        height: 448px;
-        background-color: #424242;
-        position: relative;
-        //left: 5px;
-      }
-
-      .circle {
-        width: 25px;
-        height: 25px;
-        border-radius: 15px;
-        background-color: #f3f5f5;
-        border: 3px solid #404041;
-        position: absolute;
-        left: -11px; /* Центруємо коло відносно лінії */
-      }
-
-      .circle:nth-child(1) {
-        top: 0;
-      }
-
-      .circle:nth-child(2) {
-        top: 170px;
-      }
-
-      .circle:nth-child(3) {
-        top: 340px;
-      }
-    }
-    .col-md-4 {
-      position: relative;
-      align-items: flex-start;
-
-      .experience-item {
-        margin-bottom: 78px; /* Інтервал між блоками */
-      }
-
-      .position-title {
-        font-size: 22px;
-        letter-spacing: 1px;
-        //line-height: 50px;
-        text-transform: uppercase;
-        color: #424242;
-        font-weight: 700;
-        font-family: "Open Sans", sans-serif;
-        margin: 0;
-      }
-
-      .date-range {
-        font-size: 20px;
-        color: #939598;
-        font-weight: 700;
-        font-family: "Lato", sans-serif;
-        margin: 0;
-      }
-    }
-    .col-md-7 {
-      align-items: flex-start;
-
-      .company-item {
-        margin-bottom: 60px; /* Інтервал між компаніями */
-      }
-      h1::before{
-        content: " Company Name | Location";
-        font-weight: bold;
-        font-size: 23px;
-        color: #404041;
-        text-align: left;
-
-      }
-      .company-description {
-        font-size: 17px;
-        line-height: 1.2;
-        word-spacing: -2px;
-        color: #939598;
-        font-weight: 400;
-        font-family: "Open Sans", sans-serif;
-        text-align: justify;
-      }
-    }
+  .social-info {
+    margin: 0;
+    font-size: 21px;
+    color: #fefefe;
+    font-weight: 300;
+    font-family: "Lato", sans-serif;
+    text-align: left;
+    padding-left: 10%;
   }
-
-  .education-section {
-    h4 {
-      font-size: 35px;
-      padding-top: 20px;
-      text-transform: uppercase;
-      color: #403f40;
-      font-weight: 700;
-      font-family: "Open Sans", sans-serif;
-    }
-
-    .header-line {
-      width: 100%;
-      height: 2px;
-      background-color: #403f40;
-      margin-top: 10px;
-      margin-bottom: 5%;
-    }
-
-    .col-md-1 {
-      padding-left: 30px;
-      position: relative;
-
-      .line {
-        width: 3px;
-        height: 300px;
-        background-color: #424242;
-        position: relative;
-      }
-
-      .circle {
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        background-color: #f3f5f5;
-        border: 3px solid #404041;
-        position: absolute;
-        left: -11px; /* Центруємо коло відносно лінії */
-      }
-
-      .circle:nth-child(1) {
-        top: 0;
-      }
-
-      .circle:nth-child(2) {
-        top: 150px;
-      }
-    }
-
-    .col-md-4 {
-      position: relative;
-      align-items: flex-start;
-
-      .education-item {
-        margin-bottom: 78px; /* Інтервал між блоками */
-      }
-
-      .position-title {
-        font-size: 22px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: #424242;
-        font-weight: 700;
-        font-family: "Open Sans", sans-serif;
-        margin: 0;
-      }
-
-      .date-range {
-        font-size: 20px;
-        color: #939598;
-        font-weight: 700;
-        font-family: "Lato", sans-serif;
-        margin: 0;
-      }
-    }
-
-    .col-md-7 {
-      align-items: flex-start;
-
-      .education-item {
-        margin-bottom: 60px; /* Інтервал між університетами */
-      }
-
-      .education-header {
-        font-weight: bold;
-        font-size: 23px;
-        color: #404041;
-      }
-
-      .education-description {
-        font-size: 17px;
-        line-height: 1.2;
-        word-spacing: -2px;
-        color: #939598;
-        font-weight: 400;
-        font-family: "Open Sans", sans-serif;
-        text-align: justify;
-      }
-    }
-  }
-
-  .references-section {
-    h4 {
-      font-size: 35px;
-      padding-top: 20px;
-      text-transform: uppercase;
-      color: #403f40;
-      font-weight: 700;
-      font-family: "Open Sans", sans-serif;
-    }
-
-    .header-line {
-      width: 100%;
-      height: 2px;
-      background-color: #403f40;
-      margin-top: 10px;
-      margin-bottom: 5%;
-    }
-
-    .col-md-1 {
-      padding-left: 30px;
-      position: relative;
-
-      .line {
-        width: 3px;
-        height: 200px;
-        background-color: #424242;
-        position: relative;
-      }
-
-      .circle {
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        background-color: #f3f5f5;
-        border: 3px solid #404041;
-        position: absolute;
-        left: -11px; /* Центруємо коло відносно лінії */
-      }
-
-      .circle:nth-child(1) {
-        top: 0;
-      }
-
-      .circle:nth-child(2) {
-        top: 120px;
-      }
-    }
-
-    .col-md-4 {
-      position: relative;
-      align-items: flex-start;
-
-      .reference-item {
-        margin-bottom: 78px; /* Інтервал між блоками */
-      }
-
-      .name-title {
-        font-size: 22px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: #424242;
-        font-weight: 700;
-        font-family: "Open Sans", sans-serif;
-        margin: 0;
-      }
-
-      .position {
-        font-size: 18px;
-        color: #939598;
-        font-weight: 400;
-        font-family: "Lato", sans-serif;
-      }
-    }
-
-    .col-md-7 {
-      align-items: flex-start;
-
-      .company-item {
-        margin-bottom: 60px;
-      }
-
-      .company-name {
-        font-size: 20px;
-        font-weight: 700;
-        color: #403f40;
-      }
-
-      .company-description {
-        font-size: 16px;
-        color: #939598;
-      }
-      .contact-info {
-        font-size: 16px;
-        color: #939598;
-        font-weight: 400;
-        font-family: "Open Sans", sans-serif;
-      }
-    }
+  .footer {
+    height: 100px; /* Висота футера */
+    background-color: #273347; /* Колір футера */
   }
 }
+  .right-column {
+    box-sizing: border-box;
+    height: 100vh;
+    padding-left: 5%;
+    background-color: #fefefe;
+    overflow-wrap: break-word;
+
+    h1 {
+      font-size: 70px;
+      letter-spacing: 3px;
+      color: #403f40;
+      font-weight: 300;
+      font-family: "Open Sans", sans-serif;
+      padding-top: 10%;
+    }
+
+    h1::after {
+      content: " Anderson";
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 27px;
+      letter-spacing: 1px;
+      line-height: 20px;
+      color: #808284;
+      font-family: "Century Gothic", sans-serif;
+    }
+
+    .intro-text {
+      margin-top: 60px;
+
+      h3 {
+        font-size: 38px;
+        color: #403f40;
+        font-weight: 700;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      p {
+        font-size: 20px;
+        color: #a6a9ab;
+        font-weight: 500;
+        line-height: 1.2;
+        font-family: "Open Sans", sans-serif;
+        text-align: justify;
+        word-wrap: break-word;
+      }
+    }
+
+    /* Секція Experience заголовок */
+    .experience-section, {
+      h4, {
+        font-size: 35px;
+        padding-top: 20px;
+        text-transform: uppercase;
+        color: #403f40;
+        font-weight: 700;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .header-line {
+        width: 100%;
+        height: 2px;
+        background-color: #403f40;
+        margin-top: 10px;
+        margin-bottom: 5%;
+      }
+
+      .col-md-1 {
+        padding-left: 25px;
+        width: 3rem;
+
+        .line {
+          width: 3px;
+          height: 435px;
+          background-color: #424242;
+          position: relative;
+          //left: 5px;
+        }
+
+        .circle {
+          width: 25px;
+          height: 25px;
+          border-radius: 15px;
+          background-color: #f3f5f5;
+          border: 3px solid #404041;
+          position: absolute;
+          left: -11px; /* Центруємо коло відносно лінії */
+        }
+
+        .circle:nth-child(1) {
+          top: 0;
+        }
+
+        .circle:nth-child(2) {
+          top: 168px;
+        }
+
+        .circle:nth-child(3) {
+          top: 336px;
+        }
+      }
+
+      .col-md-3 {
+
+        .experience-item {
+          margin-bottom: 72px; /* Інтервал між блоками */
+        }
+
+        .position-title {
+          font-size: 21px;
+          letter-spacing: -1px;
+          line-height: 1.4;
+          text-transform: uppercase;
+          color: #424242;
+          font-weight: 700;
+          font-family: "Open Sans", sans-serif;
+          margin: 0;
+        }
+
+        .date-range {
+          font-size: 19px;
+          padding-top: 5px;
+          color: #939598;
+          font-weight: 700;
+          font-family: "Lato", sans-serif;
+          margin: 0;
+          padding-left: 0;
+        }
+      }
+
+      .col-md-8 {
+        padding-left: 2rem;
+        width: 69%;
+        .company-item {
+          margin-bottom: 60px; /* Інтервал між компаніями */
+        }
+
+        .company-header {
+          padding-left: 30px;
+          content: " Company Name | Location";
+          //letter-spacing: -1px;
+          font-weight: 600;
+          line-height: 1.2;
+          font-size: 26px;
+          color: #404041;
+          text-align: left;
+
+        }
+
+        .company-description {
+          padding-left: 30px;
+          font-size: 20px;
+          line-height: 1.1;
+          letter-spacing: -1px;
+          color: #939598;
+          font-weight: 400;
+          font-family: "Open Sans", sans-serif;
+          text-align: justify;
+        }
+      }
+    }
+
+    .education-section {
+      h4 {
+        font-size: 35px;
+        text-transform: uppercase;
+        color: #403f40;
+        font-weight: 700;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .header-line {
+        width: 100%;
+        height: 2px;
+        background-color: #403f40;
+        margin-top: 10px;
+        margin-bottom: 5%;
+      }
+
+      .col-md-1 {
+        padding-left: 25px;
+        width: 3rem;
+
+        .line {
+          width: 3px;
+          height: 260px;
+          background-color: #424242;
+          position: relative;
+        }
+
+        .circle {
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background-color: #f3f5f5;
+          border: 3px solid #404041;
+          position: absolute;
+          left: -11px; /* Центруємо коло відносно лінії */
+        }
+
+        .circle:nth-child(1) {
+          top: 0;
+        }
+
+        .circle:nth-child(2) {
+          top: 158px;
+        }
+      }
+
+      .col-md-3 {
+        position: relative;
+        align-items: flex-start;
+
+        .education-item {
+          margin-bottom: 64px; /* Інтервал між блоками */
+        }
+
+        .position-title {
+          font-size: 21px;
+          letter-spacing: -1px;
+          line-height: 1.4;
+          text-transform: uppercase;
+          color: #424242;
+          font-weight: 700;
+          font-family: "Open Sans", sans-serif;
+          margin: 0;
+        }
+
+        .date-range {
+          font-size: 19px;
+          padding-top: 5px;
+          color: #939598;
+          font-weight: 700;
+          font-family: "Lato", sans-serif;
+          margin: 0;
+        }
+      }
+
+      .col-md-8 {
+        padding-left: 2rem;
+        width: 69%;
+        .education-item {
+          margin-bottom: 50px; /* Інтервал між університетами */
+        }
+
+        .education-header {
+          font-weight: 600;
+          font-size: 26px;
+          color: #404041;
+          //letter-spacing: -1px;
+          line-height: 1.2;
+          padding-left: 30px;
+          text-align: left;
+        }
+
+        .education-description {
+          padding-left: 30px;
+          font-size: 20px;
+          line-height: 1.1;
+          letter-spacing: -1px;
+          color: #939598;
+          font-weight: 400;
+          font-family: "Open Sans", sans-serif;
+          text-align: justify;
+        }
+      }
+    }
+
+    .references-section {
+      h4 {
+
+        font-size: 28px;
+        padding-top: 70px;
+        text-transform: uppercase;
+        color: #403f40;
+        font-weight: 700;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .header-line {
+        width: 100%;
+        height: 2px;
+        background-color: #403f40;
+        //margin-top: 10px;
+        margin-bottom: 5%;
+      }
+
+      .col-md-1 {
+        padding-left: 27px;
+        width: 3rem;
+
+        .line {
+          width: 3px;
+          height: 220px;
+          background-color: #424242;
+          position: relative;
+        }
+
+        .circle {
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background-color: #f3f5f5;
+          border: 3px solid #404041;
+          position: absolute;
+          left: -11px; /* Центруємо коло відносно лінії */
+        }
+
+        .circle:nth-child(1) {
+          top: 0;
+        }
+
+        .circle:nth-child(2) {
+          top: 140px;
+        }
+      }
+
+      .col-md-3 {
+        position: relative;
+        align-items: flex-start;
+        padding-right: 4px;
+
+        .reference-item {
+          margin-bottom: 75px; /* Інтервал між блоками */
+        }
+
+        .name-title {
+          font-size: 21px;
+          letter-spacing: -1px;
+          line-height: 1.4;
+          text-transform: uppercase;
+          color: #424242;
+          font-weight: 700;
+          font-family: "Open Sans", sans-serif;
+          margin: 0;
+        }
+
+        .position {
+          font-size: 19px;
+          padding-top: 5px;
+          color: #939598;
+          font-weight: 700;
+          font-family: "Lato", sans-serif;
+          margin: 0;
+        }
+      }
+
+      .col-md-8 {
+        align-items: flex-start;
+        padding-left: 5%;
+
+        .reference-item {
+          margin-bottom: 35px; /* Інтервал між компаніями */
+        }
+
+        .reference-name {
+          font-weight: 600;
+          font-size: 26px;
+          color: #404041;
+          letter-spacing: -1px;
+          line-height: 1.1;
+          padding-left: 30px;
+          text-align: left;
+        }
+
+        .reference-description {
+          padding-left: 30px;
+          font-size: 20px;
+          letter-spacing: -1px;
+          line-height: 1.2;
+          color: #939598;
+          font-weight: 400;
+          font-family: "Open Sans", sans-serif;
+          text-align: justify;
+        }
+
+        .contact-label {
+          color: #000; /* Чорний колір для лейблів "Phone" та "Email" */
+          font-weight: bold;
+          font-size: 19px;
+        }
+
+        /* Відступ зліва тільки для "Phone" */
+        .contact-label:first-child {
+          padding-left: 30px;
+        }
+
+        .email-label {
+          padding-left: 0; /* Забираємо падінг перед "Email" */
+        }
+
+        p {
+          color: #939598;
+          font-size: 20px;
+          margin: 0;
+          line-height: 1.3;
+        }
+      }
+    }
+    .footer-right{
+      height: 50px; /* Висота футера */
+      background-color: #fefefe;
+    }
+  }
+
 

@@ -11,7 +11,7 @@ const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync').create();
 
 // html task
-const html_task = () =>  src('app/*.html')
+const html_task = () =>  src('app/index.html')
     .pipe(file_include({
         prefix: '@@',
         basepath: '@file'
