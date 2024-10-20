@@ -1,11 +1,11 @@
 body {
-  margin: 0; /* Відміняємо стандартні відступи браузера */
-  padding-right: 3%; /* Встановлюємо відступ справа на всій сторінці */
+  margin: 0;
+  padding-right: 3%;
   height: 100%;
-  box-sizing: border-box; /* Щоб padding враховувався в ширині */
+  box-sizing: border-box;
 }
 .header-section {
-  width: 100%; /* Використовуємо повну ширину для контейнера */
+  width: 100%;
   justify-content: space-between;
 }
 .left-column {
@@ -16,21 +16,21 @@ body {
 
   /* Image */
   .profile-image-container {
-    width: 290px; /* Контейнер тепер займатиме 100% ширини колонки */
-    height: 290px; /* Автоматична висота для пропорційного зменшення */
-    border-radius: 50%; /* Кругла форма контейнера */
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
     background-color: #273347;
     border: 4px solid #fefefe;
-    margin-top: 15%; /* Відсотковий відступ зверху */
+    margin-top: 15%;
     display: flex;
     margin-bottom: 115px;
   }
 
   .profile-image-container img {
-    width: 90%; /* Зображення займає 90% ширини контейнера */
+    width: 90%;
     height: 90%;
-    border-radius: 50%; /* Кругле зображення */
-    object-fit: cover; /* Заповнення контейнера без спотворення */
+    border-radius: 50%;
+    object-fit: cover;
   }
 
   /* Contact */
@@ -162,8 +162,8 @@ body {
     padding-left: 10%;
   }
   .footer {
-    height: 100px; /* Висота футера */
-    background-color: #273347; /* Колір футера */
+    height: 100px;
+    background-color: #273347;
   }
 }
   .right-column {
@@ -254,7 +254,7 @@ body {
           background-color: #f3f5f5;
           border: 3px solid #404041;
           position: absolute;
-          left: -11px; /* Центруємо коло відносно лінії */
+          left: -11px;
         }
 
         .circle:nth-child(1) {
@@ -273,7 +273,7 @@ body {
       .col-md-3 {
 
         .experience-item {
-          margin-bottom: 72px; /* Інтервал між блоками */
+          margin-bottom: 72px;
         }
 
         .position-title {
@@ -302,13 +302,12 @@ body {
         padding-left: 2rem;
         width: 69%;
         .company-item {
-          margin-bottom: 60px; /* Інтервал між компаніями */
+          margin-bottom: 60px;
         }
 
         .company-header {
           padding-left: 30px;
           content: " Company Name | Location";
-          //letter-spacing: -1px;
           font-weight: 600;
           line-height: 1.2;
           font-size: 26px;
@@ -365,7 +364,7 @@ body {
           background-color: #f3f5f5;
           border: 3px solid #404041;
           position: absolute;
-          left: -11px; /* Центруємо коло відносно лінії */
+          left: -11px;
         }
 
         .circle:nth-child(1) {
@@ -382,7 +381,7 @@ body {
         align-items: flex-start;
 
         .education-item {
-          margin-bottom: 64px; /* Інтервал між блоками */
+          margin-bottom: 64px;
         }
 
         .position-title {
@@ -410,7 +409,7 @@ body {
         padding-left: 2rem;
         width: 69%;
         .education-item {
-          margin-bottom: 50px; /* Інтервал між університетами */
+          margin-bottom: 50px;
         }
 
         .education-header {
@@ -451,7 +450,6 @@ body {
         width: 100%;
         height: 2px;
         background-color: #403f40;
-        //margin-top: 10px;
         margin-bottom: 5%;
       }
 
@@ -473,7 +471,7 @@ body {
           background-color: #f3f5f5;
           border: 3px solid #404041;
           position: absolute;
-          left: -11px; /* Центруємо коло відносно лінії */
+          left: -11px;
         }
 
         .circle:nth-child(1) {
@@ -491,7 +489,7 @@ body {
         padding-right: 4px;
 
         .reference-item {
-          margin-bottom: 75px; /* Інтервал між блоками */
+          margin-bottom: 75px;
         }
 
         .name-title {
@@ -520,7 +518,7 @@ body {
         padding-left: 5%;
 
         .reference-item {
-          margin-bottom: 35px; /* Інтервал між компаніями */
+          margin-bottom: 35px;
         }
 
         .reference-name {
@@ -545,18 +543,17 @@ body {
         }
 
         .contact-label {
-          color: #000; /* Чорний колір для лейблів "Phone" та "Email" */
+          color: #000;
           font-weight: bold;
           font-size: 19px;
         }
 
-        /* Відступ зліва тільки для "Phone" */
         .contact-label:first-child {
           padding-left: 30px;
         }
 
         .email-label {
-          padding-left: 0; /* Забираємо падінг перед "Email" */
+          padding-left: 0;
         }
 
         p {
@@ -568,7 +565,7 @@ body {
       }
     }
     .footer-right{
-      height: 50px; /* Висота футера */
+      height: 50px;
       background-color: #fefefe;
     }
   }
