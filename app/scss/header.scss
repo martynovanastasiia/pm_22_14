@@ -570,4 +570,14 @@ body {
     }
   }
 
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
 
+.collapsible.active + .collapsible-content {
+  max-height: 500px;
+  opacity: 1;
+}
