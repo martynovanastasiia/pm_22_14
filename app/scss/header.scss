@@ -1,17 +1,32 @@
+
+$primary-color: #273347;
+$secondary-color: #fefefe;
+$accent-color: #403f40;
+$muted-color: #939598;
+$grey-color: #404041;
+
+@mixin font-style($size, $weight, $family, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  font-family: $family, sans-serif;
+  color: $color;
+}
 body {
   margin: 0;
   padding-right: 3%;
   height: 100%;
   box-sizing: border-box;
+  background-color: $primary-color ;
 }
 .header-section {
   width: 100%;
   justify-content: space-between;
 }
 .left-column {
-  background-color: #273347;
+  background-color: $primary-color;
   padding-top: 30px;
   box-sizing: border-box;
+
 
 
   /* Image */
@@ -19,8 +34,8 @@ body {
     width: 290px;
     height: 290px;
     border-radius: 50%;
-    background-color: #273347;
-    border: 4px solid #fefefe;
+    background-color: $primary-color;
+    border: 4px solid $secondary-color;
     margin-top: 15%;
     display: flex;
     margin-bottom: 115px;
@@ -35,12 +50,8 @@ body {
 
   /* Contact */
   .contact-title {
-
-    font-size: 32px;
+    @include font-style(32px, 700, "Open Sans", $secondary-color);
     text-transform: uppercase;
-    color: #fefefe;
-    font-weight: 700;
-    font-family: "Open Sans", sans-serif;
     padding-left: 10%;
   }
 
@@ -48,7 +59,7 @@ body {
     width: 80%;
     height: 2px;
     padding-left: 20px;
-    background-color: #fefefe;
+    background-color: $secondary-color;
     margin: 0 auto 40px;
   }
 
@@ -82,57 +93,39 @@ body {
   }
 
   p {
-    font-size: 20px;
-    color: #fefefe;
-    font-weight: 100;
+    @include font-style(20px, 100, "Lato", $secondary-color);
     line-height: 1.2;
-    font-family: "Lato", sans-serif;
     padding-left: 20px;
     padding-bottom: 28px;
   }
 
   .contact-info {
-    font-size: 20px;
-    color: #fefefe;
-    font-weight: 700;
-    font-family: "Lato", sans-serif;
+    @include font-style(20px, 700, "Lato", $secondary-color);
   }
 
   .skills-title {
+    @include font-style(32px, 700,"Open Sans", $secondary-color);
     margin-top: 50px;
-    font-size: 32px;
     text-transform: uppercase;
-    color: #fefefe;
-    font-weight: 700;
-    font-family: "Open Sans", sans-serif;
     padding-left: 10%;
   }
 
   .skills-line {
     width: 80%;
     height: 2px;
-    background-color: #fefefe;
+    background-color: $secondary-color;
     margin: 0 auto 30px;
-
-
   }
 
   .skill-subtitle {
-
-    font-size: 28px;
+    @include font-style(28px, 700,"Open Sans", $secondary-color);
     text-transform: uppercase;
-    color: #fefefe;
-    font-weight: 700;
-    font-family: "Open Sans", sans-serif;
     padding-top: 20px;
     padding-left: 10%;
   }
 
   .skill-info {
-    font-size: 20px;
-    color: #fefefe;
-    font-weight: 100;
-    font-family: "Lato", sans-serif;
+    @include font-style(20px, 100, "Lato", $secondary-color);
     padding-left: 10%;
     padding-top: 10px;
   }
@@ -142,43 +135,35 @@ body {
   }
 
   .social-subtitle {
-    font-weight: bold;
+    @include font-style(21px, bold, "Lato", $secondary-color);
     margin: 0;
-    font-size: 21px;
-    color: #fefefe;
-    font-family: "Lato", sans-serif;
     text-align: left;
     padding-left: 10%;
     padding-top: 8px;
   }
 
   .social-info {
+    @include font-style(21px, 300, "Lato", $secondary-color);
     margin: 0;
-    font-size: 21px;
-    color: #fefefe;
-    font-weight: 300;
-    font-family: "Lato", sans-serif;
     text-align: left;
     padding-left: 10%;
   }
+
   .footer {
     height: 100px;
-    background-color: #273347;
+    background-color: $primary-color;
   }
 }
   .right-column {
     box-sizing: border-box;
-    height: 100vh;
+    height: 100%;
     padding-left: 5%;
-    background-color: #fefefe;
+    background-color: $secondary-color;
     overflow-wrap: break-word;
 
     h1 {
-      font-size: 70px;
+      @include font-style(70px, 300, "Open Sans", $accent-color);
       letter-spacing: 3px;
-      color: #403f40;
-      font-weight: 300;
-      font-family: "Open Sans", sans-serif;
       padding-top: 10%;
     }
 
@@ -188,29 +173,21 @@ body {
     }
 
     h2 {
-      font-size: 27px;
+      @include font-style(27px, 300, "Century Gothic", #808284);
       letter-spacing: 1px;
       line-height: 20px;
-      color: #808284;
-      font-family: "Century Gothic", sans-serif;
     }
 
     .intro-text {
       margin-top: 60px;
 
       h3 {
-        font-size: 38px;
-        color: #403f40;
-        font-weight: 700;
-        font-family: "Open Sans", sans-serif;
+        @include font-style(38px, 700, "Open Sans", $accent-color);
       }
 
       p {
-        font-size: 20px;
-        color: #a6a9ab;
-        font-weight: 500;
+        @include font-style(20px, 500, "Open Sans", $muted-color);
         line-height: 1.2;
-        font-family: "Open Sans", sans-serif;
         text-align: justify;
         word-wrap: break-word;
       }
@@ -219,18 +196,15 @@ body {
     /* Секція Experience заголовок */
     .experience-section, {
       h4, {
-        font-size: 35px;
+        @include font-style(35px, 700, "Open Sans", $accent-color);
         padding-top: 20px;
         text-transform: uppercase;
-        color: #403f40;
-        font-weight: 700;
-        font-family: "Open Sans", sans-serif;
       }
 
       .header-line {
         width: 100%;
         height: 2px;
-        background-color: #403f40;
+        background-color: $accent-color;
         margin-top: 10px;
         margin-bottom: 5%;
       }
@@ -244,15 +218,14 @@ body {
           height: 435px;
           background-color: #424242;
           position: relative;
-          //left: 5px;
         }
 
         .circle {
           width: 25px;
           height: 25px;
           border-radius: 15px;
-          background-color: #f3f5f5;
-          border: 3px solid #404041;
+          background-color: $secondary-color;
+          border: 3px solid $grey-color;
           position: absolute;
           left: -11px;
         }
@@ -277,22 +250,16 @@ body {
         }
 
         .position-title {
-          font-size: 21px;
+          @include font-style(21px, 700, "Open Sans", $accent-color);
           letter-spacing: -1px;
           line-height: 1.4;
           text-transform: uppercase;
-          color: #424242;
-          font-weight: 700;
-          font-family: "Open Sans", sans-serif;
           margin: 0;
         }
 
         .date-range {
-          font-size: 19px;
+          @include font-style(19px, 700, "Lato", $muted-color);
           padding-top: 5px;
-          color: #939598;
-          font-weight: 700;
-          font-family: "Lato", sans-serif;
           margin: 0;
           padding-left: 0;
         }
@@ -306,24 +273,19 @@ body {
         }
 
         .company-header {
+          @include font-style(26px, 600, "Open Sans", $accent-color);
           padding-left: 30px;
           content: " Company Name | Location";
-          font-weight: 600;
           line-height: 1.2;
-          font-size: 26px;
-          color: #404041;
           text-align: left;
 
         }
 
         .company-description {
+          @include font-style(20px, 400, "Open Sans", $muted-color);
           padding-left: 30px;
-          font-size: 20px;
           line-height: 1.1;
           letter-spacing: -1px;
-          color: #939598;
-          font-weight: 400;
-          font-family: "Open Sans", sans-serif;
           text-align: justify;
         }
       }
@@ -331,17 +293,14 @@ body {
 
     .education-section {
       h4 {
-        font-size: 35px;
+        @include font-style(35px, 700, "Open Sans", $accent-color);
         text-transform: uppercase;
-        color: #403f40;
-        font-weight: 700;
-        font-family: "Open Sans", sans-serif;
       }
 
       .header-line {
         width: 100%;
         height: 2px;
-        background-color: #403f40;
+        background-color: $accent-color;
         margin-top: 10px;
         margin-bottom: 5%;
       }
@@ -353,7 +312,7 @@ body {
         .line {
           width: 3px;
           height: 260px;
-          background-color: #424242;
+          background-color: $grey-color;
           position: relative;
         }
 
@@ -361,8 +320,8 @@ body {
           width: 25px;
           height: 25px;
           border-radius: 50%;
-          background-color: #f3f5f5;
-          border: 3px solid #404041;
+          background-color: $secondary-color;
+          border: 3px solid $grey-color;
           position: absolute;
           left: -11px;
         }
@@ -385,22 +344,16 @@ body {
         }
 
         .position-title {
-          font-size: 21px;
+          @include font-style(21px, 700, "Open Sans", $accent-color);
           letter-spacing: -1px;
           line-height: 1.4;
           text-transform: uppercase;
-          color: #424242;
-          font-weight: 700;
-          font-family: "Open Sans", sans-serif;
           margin: 0;
         }
 
         .date-range {
-          font-size: 19px;
+          @include font-style(19px, 700, "Lato", $muted-color);
           padding-top: 5px;
-          color: #939598;
-          font-weight: 700;
-          font-family: "Lato", sans-serif;
           margin: 0;
         }
       }
@@ -413,23 +366,17 @@ body {
         }
 
         .education-header {
-          font-weight: 600;
-          font-size: 26px;
-          color: #404041;
-          //letter-spacing: -1px;
+          @include font-style(26px, 600, "Open Sans", $accent-color);
           line-height: 1.2;
           padding-left: 30px;
           text-align: left;
         }
 
         .education-description {
+          @include font-style(20px, 400, "Open Sans", $muted-color);
           padding-left: 30px;
-          font-size: 20px;
           line-height: 1.1;
           letter-spacing: -1px;
-          color: #939598;
-          font-weight: 400;
-          font-family: "Open Sans", sans-serif;
           text-align: justify;
         }
       }
@@ -437,19 +384,15 @@ body {
 
     .references-section {
       h4 {
-
-        font-size: 28px;
+        @include font-style(28px, 700, "Open Sans", $accent-color);
         padding-top: 70px;
         text-transform: uppercase;
-        color: #403f40;
-        font-weight: 700;
-        font-family: "Open Sans", sans-serif;
       }
 
       .header-line {
         width: 100%;
         height: 2px;
-        background-color: #403f40;
+        background-color: $accent-color;
         margin-bottom: 5%;
       }
 
@@ -460,7 +403,7 @@ body {
         .line {
           width: 3px;
           height: 220px;
-          background-color: #424242;
+          background-color: $grey-color;
           position: relative;
         }
 
@@ -468,8 +411,8 @@ body {
           width: 25px;
           height: 25px;
           border-radius: 50%;
-          background-color: #f3f5f5;
-          border: 3px solid #404041;
+          background-color: $secondary-color;
+          border: 3px solid $grey-color;
           position: absolute;
           left: -11px;
         }
@@ -493,22 +436,17 @@ body {
         }
 
         .name-title {
-          font-size: 21px;
+          @include font-style(21px, 700, "Open Sans", $accent-color);
           letter-spacing: -1px;
           line-height: 1.4;
           text-transform: uppercase;
-          color: #424242;
-          font-weight: 700;
-          font-family: "Open Sans", sans-serif;
           margin: 0;
         }
 
         .position {
+          @include font-style(19px, 700, "Lato", $muted-color);
           font-size: 19px;
           padding-top: 5px;
-          color: #939598;
-          font-weight: 700;
-          font-family: "Lato", sans-serif;
           margin: 0;
         }
       }
@@ -522,9 +460,7 @@ body {
         }
 
         .reference-name {
-          font-weight: 600;
-          font-size: 26px;
-          color: #404041;
+          @include font-style(26px, 600, "Open Sans", $accent-color);
           letter-spacing: -1px;
           line-height: 1.1;
           padding-left: 30px;
@@ -532,13 +468,10 @@ body {
         }
 
         .reference-description {
+          @include font-style(20px, 400, "Open Sans", $muted-color);
           padding-left: 30px;
-          font-size: 20px;
           letter-spacing: -1px;
           line-height: 1.2;
-          color: #939598;
-          font-weight: 400;
-          font-family: "Open Sans", sans-serif;
           text-align: justify;
         }
 
@@ -557,7 +490,7 @@ body {
         }
 
         p {
-          color: #939598;
+          color: $muted-color;
           font-size: 20px;
           margin: 0;
           line-height: 1.3;
@@ -566,7 +499,7 @@ body {
     }
     .footer-right{
       height: 50px;
-      background-color: #fefefe;
+      background-color: $secondary-color;
     }
   }
 
