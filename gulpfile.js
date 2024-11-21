@@ -39,7 +39,7 @@ const scss_task = () => {
         .pipe(browserSync.stream());
 };
 
-//imgs task
+//Imgs task
 const img_task = () =>  src('app/img/*.+(jpg|jpeg|png|gif)', {encoding: false})
     .pipe(imagemin({
         progressive: true,
@@ -48,7 +48,11 @@ const img_task = () =>  src('app/img/*.+(jpg|jpeg|png|gif)', {encoding: false})
     }))
     .pipe(dest('dist/imgs'))
     .pipe(browserSync.stream());
+//JSON to dist
+const copy_data_task = () => src('data/data.json')
 
+        .pipe(dest('dist/data'))
+        .pipe(browserSync.stream());
 
 
 // BrowserSync task
@@ -67,6 +71,7 @@ const watch_task = () => {
     watch('app/scss/*.scss', parallel(scss_task)); // Всі SCSS тепер об'єднуються в один файл
     watch('app/js/*.js', parallel(js_task));
     watch('app/imgs/*.+(jpg|jpeg|png|gif)', img_task);
+    watch('data/data.json', copy_data_task);
 }
 
-exports.default = series(html_task, scss_task, img_task, watch_task,js_task, browserSync_task );
+exports.default = series(html_task, scss_task, img_task, watch_task,js_task, copy_data_task, browserSync_task );
